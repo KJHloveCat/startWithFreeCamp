@@ -1,0 +1,27 @@
+.pw {
+    border: 1px solid blue;
+}
+
+.pb {
+    width: 670px;
+    height: 960px;
+    border: 1px solid #AACDFF;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #0068FF;
+}
+
+p{
+    color:#797979;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
