@@ -7,11 +7,26 @@
             let tokenNum = String(Math.floor( Math.random() * 1000000 )).padStart(6, "0")
             document.getElementById("token").innerText = tokenNum
             document.getElementById("token").style.color = "#" + tokenNum
+
+            let time = 10
+            setInterval(() => {
+                if (time >= 0){
+                let min = Math.floor( time / 60 )
+                let sec = String(time % 60).padStart(2,"0")
+
+                document.getElementById("timer").innerText = min + ":" + sec
+                time = time - 1
+                } else {
+                    document.getElementById("auth").disabled = true
+                }
+            }, 1000);
         }
     </script>
 </head>
 <body>
     <div id="token">000000</div>
     <button onclick=send()>인증번호 전송</button>
+    <div id="timer">3:00</div>
+    <button id="auth">인증완료</button>
 </body>
 </html>
