@@ -5,8 +5,10 @@
 
 html,
 body {
+    margin: 15px 0px 0px 15px;
     width: 100%;
     height: 100%;
+
 }
 
 .wrapper {
@@ -38,14 +40,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 60px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.w__phone {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 input::placeholder {
     padding-left: 10px;
 }
 
-input {
+.textbox01 {
     width:380px;
     height:60px;
     font-size:16px;
@@ -53,23 +63,94 @@ input {
     border-radius: 7px;
 }
 
+.textbox02 {
+    width:100px;
+    height:40px;
+    font-size:16px;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+}
+
+.divideLine02 {
+    width: 11px;
+    border-top: 1px solid black;
+    margin-top: 20px;
+}
+
 .w__token {
     width: 100%;
+    height: 40px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
 
+.token__num {
     font-size: 18px;
-    color: #0068FF;
     font-weight: 400;
+    color: #0068FF;
 }
 
-button {
+.token__send__btn {
+    width: 120px;
+    height: 100%;
+    color: #0068FF;
+    margin-left: 21px;
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+}
+
+.token__ok__btn {
+    width: 120px;
+    height: 100%;
+    color: #FFFFFF;
+    margin-left: 21px;
+    background-color: #0068FF;
+    border: 1px solid #D2D2D2;
+    border-radius: 7px;
+}
+
+.select__location {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding-left: 10px;
+    border-radius: 7px;
+    border: 1px solid #D2D2D2
+}
+
+.w__checkbox {
+    width: 200px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 400;
-    color: #0068FF;
+    align-items: center;
 }
 
+.w__male {
+    margin-left: 30px;
+}
+.w__female {
+    margin-left: 30px;
+}
 
+.divideLine {
+    width: 100%;
+    border-top: 1px solid gray;
+}
 
-
-
+.signup {
+    width: 100%;
+    height: 75px;
+    background: #FFFFFF;
+    border: 1px solid #0068FF;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #0068FF;
+    margin-bottom: 30px;
+}
