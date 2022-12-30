@@ -32,6 +32,7 @@ body {
     font-weight: 700;
     color: #0068FF;
     margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .wrapper__body {
@@ -87,7 +88,7 @@ input::placeholder {
 
 .token__num {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     color: #0068FF;
 }
 
@@ -99,6 +100,8 @@ input::placeholder {
     background-color: #FFFFFF;
     border: 1px solid #D2D2D2;
     border-radius: 7px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .token__ok__btn {
@@ -109,6 +112,8 @@ input::placeholder {
     background-color: #0068FF;
     border: 1px solid #D2D2D2;
     border-radius: 7px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .select__location {
@@ -139,7 +144,7 @@ input::placeholder {
 
 .divideLine {
     width: 100%;
-    border-top: 1px solid gray;
+    border-top: 1px solid #E6E6E6;
 }
 
 .signup {
