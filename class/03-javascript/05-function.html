@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <title>Document</title>
     <script>
-        let send = ()  => {
-            let tokenNum = String(Math.floor( Math.random() * 1000000 )).padStart(6, "0")
-            document.getElementById("token").innerText = tokenNum
-            document.getElementById("token").style.color = "#" + tokenNum
+        let isStarted = false;
 
-            let time = 10
-            setInterval(() => {
-                if (time >= 0){
-                let min = Math.floor( time / 60 )
-                let sec = String(time % 60).padStart(2,"0")
+        let send = () => {
 
-                document.getElementById("timer").innerText = min + ":" + sec
-                time = time - 1
-                } else {
-                    document.getElementById("auth").disabled = true
-                }
-            }, 1000);
+            if (isStarted === false) {
+                //타이머가 작동중이 아닐때
+                isStarted = true
+
+                document.getElementById("auth").disabled = false
+                let tokenNum = String(Math.floor(Math.random() * 1000000)).padStart(6, "0")
+                document.getElementById("token").innerText = tokenNum
+                document.getElementById("token").style.color = "#" + tokenNum
+
+                let time = 8
+                let timer
+
+                timer = setInterval(() => {
+                    if (time >= 0) {
+                        let min = Math.floor(time / 60)
+                        let sec = String(time % 60).padStart(2, "0")
+
+                        document.getElementById("timer").innerText = min + ":" + sec
+                        time = time - 1
+                    } else {
+                        document.getElementById("auth").disabled = true
+                        isStarted = false;
+                        console.log("타이머 작동중")
+                        clearInterval(timer)
+                    }
+                }, 1000);
+            } else {
+                // 타이머가 작동중일때
+            }
+
         }
     </script>
 </head>
+
 <body>
     <div id="token">000000</div>
-    <button onclick=send()>인증번호 전송</button>
+    <button onclick=send() id="send_btn">인증번호 전송</button>
     <div id="timer">3:00</div>
     <button id="auth">인증완료</button>
 </body>
+
 </html>
