@@ -12,10 +12,14 @@
     <div class="wrapper">
         <div class="wrapper__header">코드캠프 회원가입</div>
         <div class="wrapper__body">
-            <input class="textbox01" type="text" placeholder="이메일을 입력해 주세요.">
-            <input class="textbox01" type="text" placeholder="이름을 입력해 주세요.">
-            <input class="textbox01" type="text" placeholder="비밀번호를 입력해 주세요.">
-            <input class="textbox01" type="text" placeholder="비밀번호를  다시 입력해 주세요.">
+            <input class="textbox01" type="text" id="email" placeholder="이메일을 입력해 주세요.">
+            <div class="error" id="error_email"></div>
+            <input class="textbox01" type="text" id="name" placeholder="이름을 입력해 주세요.">
+            <div class="error" id="error_name"></div>
+            <input class="textbox01" type="text" id="password" placeholder="비밀번호를 입력해 주세요.">
+            <div class="error" id="error_password"></div>
+            <input class="textbox01" type="text" id="passwordre" placeholder="비밀번호를  다시 입력해 주세요.">
+            <div class="error" id="error_passwordre"></div>
             <div class="w__phone">
                 <input class="textbox02" type="text" id="textbox02" oninput="changeFocus01()" maxlength="3">
                 <div class="divideLine02"></div>
@@ -31,21 +35,22 @@
                 <span class="token__num" id="token">0:06</span>
                 <button class="token__ok__btn" id="token__ok__btn" onclick="token__ok()" disabled = 'true'>인증확인</button>
             </div>
-            <select class="select__location">
+            <select class="select__location" id="select_lo">
                 <option selected="true" disabled="true">지역을 선택하세요</option>
                 <option>서울</option>
                 <option>경기</option>
                 <option>대구</option>
             </select>
-
+            <div class="error" id="error_location"></div>
             <div class="w__checkbox">
-                <input class="w__male" type="checkbox" id="ch_male">남성
-                <input class="w__female" type="checkbox" id="ch_female">여성
+                <input class="w__male" onclick="genderClick(this)" type="checkbox" id="ch_male">남성
+                <input class="w__female" onclick="genderClick(this)" type="checkbox" id="ch_female">여성
             </div>
 
+            <div class="error" id="error_gender"></div>
             <div class="divideLine"></div>
 
-            <button class="signup" id="signup">가입하기</button>
+            <button class="signup" id="signup" onclick="signup()" disabled="true">가입하기</button>
 
         </div>
     </div>
