@@ -95,7 +95,7 @@ input::placeholder {
 .token__send__btn {
     width: 120px;
     height: 100%;
-    color: #0068FF;
+    color: #828282;
     margin-left: 21px;
     background-color: #FFFFFF;
     border: 1px solid #D2D2D2;
@@ -107,9 +107,9 @@ input::placeholder {
 .token__ok__btn {
     width: 120px;
     height: 100%;
-    color: #FFFFFF;
+    color: #828282;
     margin-left: 21px;
-    background-color: #0068FF;
+    background-color: #FFFFFF;
     border: 1px solid #D2D2D2;
     border-radius: 7px;
     font-weight: 400;

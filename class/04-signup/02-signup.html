@@ -4,6 +4,7 @@
 <head>
     <title>회원가입</title>
     <link href="./02-signup.css" rel="stylesheet">
+    <script src="./signup.js"></script>
 
 </head>
 
@@ -16,19 +17,19 @@
             <input class="textbox01" type="text" placeholder="비밀번호를 입력해 주세요.">
             <input class="textbox01" type="text" placeholder="비밀번호를  다시 입력해 주세요.">
             <div class="w__phone">
-                <input class="textbox02" type="text" id="textbox02">
+                <input class="textbox02" type="text" id="textbox02" oninput="changeFocus01()" maxlength="3">
                 <div class="divideLine02"></div>
-                <input class="textbox02" type="text" id="textbox02">
+                <input class="textbox02" type="text" id="textbox03" oninput="changeFocus02()" maxlength="4">
                 <div class="divideLine02"></div>
-                <input class="textbox02" type="text" id="textbox02">
+                <input class="textbox02" type="text" id="textbox04" oninput="enableTokenSend()" maxlength="4">
             </div>
             <div class="w__token">
                 <span class="token__num" id="token__num">000000</span>
-                <button class="token__send__btn" id="token__send__btn">인증번호 전송</button>
+                <button class="token__send__btn" id="token__send__btn" onclick="token__send()" disabled = 'true'>인증번호 전송</button>
             </div>
             <div class="w__token">
-                <span class="token__num" id="token">3:00</span>
-                <button class="token__ok__btn" id="token__ok__btn">인증완료</button>
+                <span class="token__num" id="token">0:06</span>
+                <button class="token__ok__btn" id="token__ok__btn" onclick="token__ok()" disabled = 'true'>인증확인</button>
             </div>
             <select class="select__location">
                 <option selected="true" disabled="true">지역을 선택하세요</option>
